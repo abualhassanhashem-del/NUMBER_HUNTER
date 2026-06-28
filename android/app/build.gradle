@@ -1,20 +1,19 @@
 plugins {
-    id "com.android.application" version "8.3.0"
-    id "org.jetbrains.kotlin.android" version "1.9.24"
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
 }
 
 android {
-    namespace "com.example.number_hunter"
+    namespace "com.abualhassan.number_hunter"
     compileSdk 34
-
     defaultConfig {
-        applicationId "com.example.number_hunter"
+        applicationId "com.abualhassan.number_hunter"
         minSdk 21
         targetSdk 34
-        versionCode flutter.versionCode.toInteger()
-        versionName flutter.versionName
+        versionCode 1
+        versionName "1.0"
     }
-
     buildTypes {
         release {
             signingConfig signingConfigs.debug
