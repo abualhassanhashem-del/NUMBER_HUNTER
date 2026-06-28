@@ -1,9 +1,4 @@
-pluginManagement {
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
-}
-rootProject.name = "number_hunter"
 include ':app'
+
+def flutterProjectRoot = file('../..')
+apply from: "$flutterProjectRoot/packages/flutter_tools/gradle/app_plugin_loader.gradle"
