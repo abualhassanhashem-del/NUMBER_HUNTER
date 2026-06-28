@@ -3,7 +3,6 @@
     <application
         android:label="number_hunter"
         android:name="${applicationName}"
-       
         <activity
             android:name=".MainActivity"
             android:exported="true"
