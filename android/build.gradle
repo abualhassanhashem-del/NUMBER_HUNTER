@@ -1,5 +1,12 @@
 plugins {
     id "com.android.application" version "8.3.0" apply false
-    id "org.jetbrains.kotlin.android" version "1.9.24" apply false
+    id "org.jetbrains.kotlin.android" version "1.9.22" apply false // نزلته من 1.9.24 الى 1.9.22 لان 1.9.24 ما موجود
     id "dev.flutter.flutter-gradle-plugin" apply false
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral() // هذا اهم سطر. بدونه ما يلكي AndroidX
+    }
 }
