@@ -7,6 +7,18 @@ plugins {
 android {
     namespace "com.abualhassan.number_hunter"
     compileSdk 34
+    ndkVersion flutter.ndkVersion
+
+    // هذا الجزء الجديد: نخلي الجافا والكتلن نفس النسخة 17
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
     defaultConfig {
         applicationId "com.abualhassan.number_hunter"
         minSdk 21
@@ -16,6 +28,7 @@ android {
     }
     buildTypes {
         release {
+            // انتبه: هسه دا توقع بـ debug. اذا تريد release صح لازم keystore
             signingConfig signingConfigs.debug
         }
     }
