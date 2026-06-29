@@ -9,12 +9,10 @@ android {
     compileSdk 34
     ndkVersion flutter.ndkVersion
 
-    // نخلي الجافا والكتلن نفس النسخة 17
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-
     kotlinOptions {
         jvmTarget = '17'
     }
@@ -28,10 +26,9 @@ android {
     }
     buildTypes {
         release {
+            signingConfig signingConfigs.debug  // رجعناه
             minifyEnabled false
             shrinkResources false
-            // شلت هذا السطر: signingConfig signingConfigs.debug 
-            // حتى يطلع APK بدون توقيع اسمه app-release-unsigned.apk
         }
     }
 }
